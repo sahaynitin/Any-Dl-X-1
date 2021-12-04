@@ -32,7 +32,7 @@ from helper_funcs.ran_text import random_char
 
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-@pyrogram.Client.on_message(pyrogram.filters.command(["getlink2"]))
+@pyrogram.Client.on_message(pyrogram.filters.command(["uptobayfile"]))
 async def get_link(bot, update):
     logger.info(update.from_user)
     if update.reply_to_message is not None:

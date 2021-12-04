@@ -19,3 +19,7 @@ mutagen
 aiofiles
 ffmpeg
 sqlalchemy
+psycopg2-binary
+ffmpeg-python
+ffmpeg
+feedparser

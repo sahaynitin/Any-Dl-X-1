@@ -162,14 +162,33 @@ async def echo(bot, update):
             json.dump(response_json, outfile, ensure_ascii=False)
         # logger.info(response_json)
         cb_data = Translation.FORMAT_SELECTION.format("")
-        inline keyboard == 'audio':
-            buttons = InlineKeyboardMarkup([[InlineKeyboardButton(
-                "Audio", callback_data=f"{media_type}||{format_id}||{yturl}"), InlineKeyboardButton("Document",
-                                                                                                    callback_data=f"docaudio||{format_id}||{yturl}")]])
+        inline_keyboard = []
+        duration = None
+        if "duration" in response_json:
+            duration = response_json["duration"]
+        if "formats" in response_json:
+            for formats in response_json["formats"]:
+                format_id = formats.get("format_id")
+                format_string = formats.get("format_note")
+                if format_string is None:
+                    format_string = formats.get("format")
+                format_ext = formats.get("ext")
+                approx_file_size = ""
+                if "filesize" in formats:
+                    approx_file_size = humanbytes(formats["filesize"])
+                cb_string_video = "{}|{}|{}".format(
+                    "video", format_id, format_ext)
+                cb_string_file = "{}|{}|{}".format(
+                    "file", format_id, format_ext)
+                if format_string is not None and not "audio only" in format_string:
+                    ikeyboard = [
+                        InlineKeyboardMarkup([[InlineKeyboardButton(
+                "Audio", callback_data=f"{cb_string_video}||{format_id}||{yturl}"), InlineKeyboardButton("Document",
+                                                                                                    callback_data=f"cb_string_file||{format_id}||{yturl}")]])
         else:
             buttons = InlineKeyboardMarkup([[InlineKeyboardButton(
-                "Video", callback_data=f"{media_type}||{format_id}||{yturl}"), InlineKeyboardButton("Document",
-                                                                                                    callback_data=f"docvideo||{format_id}||{yturl}")]])
+                "Video", callback_data=f"{cb_string}||{format_id}||{yturl}"), InlineKeyboardButton("Document",
+                                                                                                    callback_data=f"cb_string_video||{format_id}||{yturl}")]])
 
         await m.edit_message_reply_markup(buttons)
 

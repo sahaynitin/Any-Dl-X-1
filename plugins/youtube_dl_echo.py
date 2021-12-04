@@ -22,7 +22,7 @@ else:
 
 # the Strings used for this "thing"
 from translation import Translation
-
+from program.types import Message
 import pyrogram
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
@@ -161,7 +161,7 @@ async def echo(bot, update):
         with open(save_ytdl_json_path, "w", encoding="utf8") as outfile:
             json.dump(response_json, outfile, ensure_ascii=False)
         # logger.info(response_json)
-        cb_data = message.data
+        cb_data = Message.data
         if media_type == 'audio':
             buttons = InlineKeyboardMarkup([[InlineKeyboardButton(
                 "Audio", callback_data=f"{media_type}||{format_id}||{yturl}"), InlineKeyboardButton("Document",

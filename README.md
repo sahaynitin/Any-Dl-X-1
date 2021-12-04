@@ -1,4 +1,4 @@
-#### All in One Bot
+#### V2Bot
 [![Readme](https://github-readme-stats.vercel.app/api/pin/?username=sahaynitin&repo=V2Bot&theme=cobalt)](h&bg_color=#24378)
 
 #### Deploy

@@ -2,8 +2,8 @@
 
 import asyncio
 from pyrogram import types, errors
-from configs import Config
-from db.database import db
+from sample_config import Config
+from database.database import db
 
 
 async def show_settings(m: "types.Message"):

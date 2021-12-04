@@ -44,7 +44,7 @@ class Translation(object):
         InlineKeyboardButton('💬 Support Group', url='https://telegram.me/tellybots_support')
         ],[
         InlineKeyboardButton('❔ Help', callback_data='help'),
-        InlineKeyboardButton('Settings', callback_data='showSettings')
+        InlineKeyboardButton('Close', callback_data='close')
         ]]
     )
     HELP_BUTTONS = InlineKeyboardMarkup(

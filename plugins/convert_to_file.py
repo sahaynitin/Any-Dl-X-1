@@ -33,7 +33,7 @@ from hachoir.parser import createParser
 from PIL import Image
 
 
-@pyrogram.Client.on_message(pyrogram.filters.command(["c2f"]))
+@pyrogram.Client.on_message(pyrogram.filters.command(["c2file"]))
 async def convert_to_audio(bot, update):
     if (update.reply_to_message is not None) and (update.reply_to_message.media is not None) :
         rn2 = random_char(5)

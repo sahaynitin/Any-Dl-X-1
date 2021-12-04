@@ -32,7 +32,24 @@ from helper_funcs.ran_text import random_char
 
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.errors import UserNotParticipant, UserBannedInChannel
+import logging
+logging.basicConfig(level=logging.DEBUG,
+                    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+logger = logging.getLogger(__name__)
+logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
+import re
+import shutil
+import random
+import ffmpeg
+import requests
+
+
+from database.database import *
+
+from hachoir.metadata import extractMetadata
+from hachoir.parser import createParser
+from datetime import datetime
 @pyrogram.Client.on_message(pyrogram.filters.regex(pattern=".*http.*"))
 async def echo(bot, update):
     if update.from_user.id in Config.BANNED_USERS:

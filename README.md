@@ -7,7 +7,7 @@
 
 <p align="">
     <a href="https://heroku.com/deploy?template=https://github.com/kalanakt/Url-Uploader-TG">
-    <img src="https://github.com/nikhileashy/justfor_testing/blob/main/herokudeploy-01-cropped.svg" alt="herokudeploy-01" border="0" height="80" width="200"></a>
+    <img src="https://github.com/nikhileashy/justfor_testing/blob/main/herokudeploy-01-cropped.svg" alt="herokudeploy-01" border="0" height="100" width="200"></a>
 </p>
 
 #### Support Group

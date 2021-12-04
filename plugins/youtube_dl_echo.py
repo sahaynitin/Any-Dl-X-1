@@ -185,7 +185,7 @@ async def echo(bot, update):
                         InlineKeyboardMarkup([[InlineKeyboardButton(
                 "Audio", callback_data=f"{cb_string_video}||{format_id}||{yturl}"), InlineKeyboardButton("Document",
                                                                                                     callback_data=f"cb_string_file||{format_id}||{yturl}")]])
-        else:
+        
             buttons = InlineKeyboardMarkup([[InlineKeyboardButton(
                 "Video", callback_data=f"{cb_string}||{format_id}||{yturl}"), InlineKeyboardButton("Document",
                                                                                                     callback_data=f"cb_string_video||{format_id}||{yturl}")]])

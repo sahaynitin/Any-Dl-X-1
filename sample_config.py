@@ -37,7 +37,7 @@ class Config(object):
     # watermark file
     DEF_WATER_MARK_FILE = ""
     DOWNLOAD_DIR = os.environ.get("DOWNLOAD_DIR", "./downloads")
-    LOGGER = logging
+    #LOGGER = logging
     OWNER_ID = int(os.environ.get("OWNER_ID", 1445283714))
     PRO_USERS = list(set(int(x) for x in os.environ.get("PRO_USERS", "0").split()))
     PRO_USERS.append(OWNER_ID)

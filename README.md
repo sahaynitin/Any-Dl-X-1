@@ -10,10 +10,10 @@
     <img src="https://github.com/nikhileashy/justfor_testing/blob/main/herokudeploy-01-cropped.svg" alt="herokudeploy-01" border="0" height="90" width="285"></a>
 </p>
 
-### Sucess Url
+#### Sucess Url
    * [All in One Bot](https://t.me/)
    
-### Tellybots_4u
+#### Tellybots_4u
    * [Tellybots](https://t.me/)
 
 

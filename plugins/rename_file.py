@@ -36,13 +36,6 @@ from PIL import Image
 
 @pyrogram.Client.on_message(pyrogram.filters.command(["ren"]))
 async def rename_doc(bot, update):
-    if update.from_user.id not in Config.AUTH_USERS:
-        await bot.delete_messages(
-            chat_id=update.chat.id,
-            message_ids=update.message_id,
-            revoke=True
-        )
-        return
     if (" " in update.text) and (update.reply_to_message is not None):
         cmd, file_name = update.text.split(" ", 1)
         description = Translation.CUSTOM_CAPTION_UL_FILE

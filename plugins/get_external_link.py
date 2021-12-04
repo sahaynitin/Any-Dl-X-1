@@ -26,13 +26,12 @@ from translation import Translation
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 from helper_funcs.display_progress import progress_for_pyrogram, humanbytes
-from database.adduser import AddUser
+
 from pyrogram import Client as Tellybots
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 @Tellybots.on_message(filters.command(["uptotsh"]))
 async def get_link(bot, update):
-    await AddUser(bot, update)
     logger.info(update.from_user)
     if update.reply_to_message is not None:
         reply_message = update.reply_to_message

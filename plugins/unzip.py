@@ -30,13 +30,6 @@ from helper_funcs.display_progress import progress_for_pyrogram, humanbytes
 
 @pyrogram.Client.on_message(pyrogram.filters.command(["unzip"]))
 async def unzip(bot, update):
-    if update.from_user.id not in Config.AUTH_USERS:
-        await bot.delete_messages(
-            chat_id=update.chat.id,
-            message_ids=update.message_id,
-            revoke=True
-        )
-        return
     saved_file_path = Config.DOWNLOAD_LOCATION + \
         "/" + str(update.from_user.id) + ".unzip.zip"
     if os.path.exists(saved_file_path):

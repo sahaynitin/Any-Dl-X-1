@@ -45,7 +45,7 @@ import ffmpeg
 import requests
 
 
-from database.database import *
+from helper_funcs.database import *
 
 from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser

@@ -21,10 +21,22 @@ class Translation(object):
 ➠ <b>Send a photo to make it as permanent thumbnail.</b>
 
 <b>Deleting Thumbnail</b>
-➠ Send /delthumb to delete thumbnail.</b>
+➠ Send /del_thumb to delete thumbnail.</b>
 
 <b>Show Thumbnail</b>
-➠ Send /showthumb to view custom thumbnail.</b>
+➠ Send /show_thumb to view custom thumbnail.</b>
+
+<b>Convert To Video</b>
+➠ <b>Send /convert2video to Convert File In Video</b>
+
+<b>Convert To File</b>
+➠ <b>Send /c2file To Convert Video To File</b>
+
+<b>Upload To GoFile</b>
+➠ Send /uptogofile To Upload Media On GoFile.</b>
+
+<b>Upload To Anonfiles</b>
+➠ Send /uptoanonfile .</b>
 
 <b>Made With 💕 By</b><b> @Tellybots_4u</b>
 """

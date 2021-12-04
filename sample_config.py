@@ -44,3 +44,21 @@ class Config(object):
     MONGODB_URI = os.environ.get("MONGODB_URI", "")
     LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-100"))
     BROADCAST_AS_COPY = bool(os.environ.get("BROADCAST_AS_COPY", "False"))
+    # Log channel for banning spammers
+    LOG_CHANNEL = os.environ.get("LOG_CHANNEL", "")
+
+    # maximum message length in Telegram
+    MAX_MESSAGE_LENGTH = 4096
+
+    # set timeout for subprocess
+    PROCESS_MAX_TIMEOUT = int(os.environ.get("TIME_LIMIT"))
+    
+    # dict to hold the ReQuest queue
+    ADL_BOT_RQ = {}
+
+    # watermark file
+    DEF_WATER_MARK_FILE = ""
+
+    # Sql Database url
+    DB_URI = os.environ.get("DATABASE_URL", "")
+    

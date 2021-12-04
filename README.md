@@ -16,6 +16,6 @@
 #### Tellybots_4u
    * [Tellybots](https://t.me/)
 
-
-
-
+#### Credits
+   * Shrimadhav Uk
+   * MyNameisasuran

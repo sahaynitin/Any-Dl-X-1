@@ -1,11 +1,9 @@
 ## URL Uploader TG
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=sahaynitin&repo=V2Bot&theme=cobalt)](h&bg_color=#24292F)
 
-# Use Leaters Vesion [ All Url Uploader Bot](https://github.com/sahaynitin/V2Bot)
-
 ## Deploy
 
-### Easiest Heroku Deploy
+### Easiest Deploy on Heroku
 
 <p align="">
     <a href="https://heroku.com/deploy?template=https://github.com/kalanakt/Url-Uploader-TG">

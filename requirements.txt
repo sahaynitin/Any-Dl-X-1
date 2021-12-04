@@ -17,3 +17,4 @@ dnspython
 motor
 mutagen
 aiofiles
+ffmpeg

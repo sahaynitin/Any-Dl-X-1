@@ -1,6 +1,6 @@
 # (c) @AbirHasan2005
 
-from bot.client import Client
+from pyrogram Client
 from pyrogram import filters
 from pyrogram import types
 from database.database import db

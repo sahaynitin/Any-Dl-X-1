@@ -32,7 +32,7 @@ from helper_funcs.ran_text import random_char
 
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-@pyrogram.Client.on_message(pyrogram.filters.command(["getlink"]))
+@pyrogram.Client.on_message(pyrogram.filters.command(["up2trsh"]))
 async def get_link(bot, update):
     logger.info(update.from_user)
     if update.reply_to_message is not None:

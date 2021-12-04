@@ -161,7 +161,7 @@ async def echo(bot, update):
         with open(save_ytdl_json_path, "w", encoding="utf8") as outfile:
             json.dump(response_json, outfile, ensure_ascii=False)
         # logger.info(response_json)
-        cb_data = m.data
+        cb_data = message.data
         if media_type == 'audio':
             buttons = InlineKeyboardMarkup([[InlineKeyboardButton(
                 "Audio", callback_data=f"{media_type}||{format_id}||{yturl}"), InlineKeyboardButton("Document",

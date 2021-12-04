@@ -22,7 +22,7 @@ else:
 
 # the Strings used for this "thing"
 from translation import Translation
-from program.types import Message
+from pyrogram.types import Message
 import pyrogram
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 

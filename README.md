@@ -1,5 +1,5 @@
 #### All in One Bot
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=sahaynitin&repo=V2Bot&theme=pink)](h&bg_color=#24292F)
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=sahaynitin&repo=V2Bot&theme=pink)](h&bg_color=#24378)
 
 #### Deploy
 

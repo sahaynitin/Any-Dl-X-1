@@ -162,7 +162,7 @@ async def echo(bot, update):
             json.dump(response_json, outfile, ensure_ascii=False)
         # logger.info(response_json)
         cb_data = Translation.FORMAT_SELECTION.format("")
-        if tg_send_type == 'audio':
+        inline keyboard == 'audio':
             buttons = InlineKeyboardMarkup([[InlineKeyboardButton(
                 "Audio", callback_data=f"{media_type}||{format_id}||{yturl}"), InlineKeyboardButton("Document",
                                                                                                     callback_data=f"docaudio||{format_id}||{yturl}")]])

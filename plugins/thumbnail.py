@@ -1,6 +1,6 @@
 # (c) @AbirHasan2005
 
-from pyrogram Client
+from pyrogram import Client
 from pyrogram import filters
 from pyrogram import types
 from database.database import db

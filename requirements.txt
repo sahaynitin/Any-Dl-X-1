@@ -11,3 +11,9 @@ tgcrypto
 youtube-dl
 yt-dlp
 olefile
+pyromod
+python-dotenv
+dnspython
+motor
+mutagen
+aiofiles

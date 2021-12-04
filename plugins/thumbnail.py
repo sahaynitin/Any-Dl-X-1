@@ -3,7 +3,7 @@
 from bot.client import Client
 from pyrogram import filters
 from pyrogram import types
-from bot.core.db.database import db
+from database.database import db
 
 
 @Client.on_message(filters.command("show_thumbnail") & filters.private & ~filters.edited)

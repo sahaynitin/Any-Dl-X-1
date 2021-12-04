@@ -12,11 +12,11 @@
     <img src="https://github.com/nikhileashy/justfor_testing/blob/main/herokudeploy-01-cropped.svg" alt="herokudeploy-01" border="0" height="90" width="285"></a>
 </p>
 
-## Succsus Url
-   * [All Url Uploader Bot](https://t.me/All_Url_Uploader_Bot)
+## Sucess Url
+   * [All in One Bot](https://t.me/)
    
-## TG Bots Updates
-   * [Bot Universe](https://t.me/TMWAD)
+## Tellybots_4u
+   * [Tellybots](https://t.me/)
 
 
 

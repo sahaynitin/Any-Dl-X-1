@@ -299,8 +299,7 @@ async def echo(bot, update):
         )
         if os.path.exists(thumb_image_path):
             im = Image.open(thumb_image_path).convert("RGB")
-            im.save(thumb_image_path.replace(".webp", ".jpg", "jpeg")
-        else:
+            im.save(thumb_image_path.replace(".webp", ".jpg", ".jpeg")
             thumb_image_path = None
         await bot.send_message(
             chat_id=update.chat.id,

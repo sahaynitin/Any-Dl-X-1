@@ -263,7 +263,6 @@ async def echo(bot, update):
                 )
             ])
         reply_markup = InlineKeyboardMarkup(inline_keyboard)
-        thumb_image_path = Config.DOWNLOAD_LOCATION + "/" + str(update.from_user.id) + ".jpg"
         thumbnail = Config.DEF_THUMB_NAIL_VID_S
         thumbnail_image = Config.DEF_THUMB_NAIL_VID_S
         if "thumbnail" in response_json:
@@ -273,7 +272,7 @@ async def echo(bot, update):
         thumb_image_path = DownLoadFile(
             thumbnail_image,
             Config.DOWNLOAD_LOCATION + "/" +
-            str(update.from_user.id) + f'{randem}' + ".webp" + ".jpg",
+            str(update.from_user.id) + f'{randem}' + ".webp" + ".jpg" + ".jpeg",
             Config.CHUNK_SIZE,
             None,  # bot,
             Translation.DOWNLOAD_START,

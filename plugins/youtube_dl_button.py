@@ -38,8 +38,23 @@ from helper_funcs.help_Nekmo_ffmpeg import generate_screen_shots
 
 async def youtube_dl_call_back(bot, update):
     cb_data = update.data
-    # youtube_dl extractors
-    tg_stg_send_type, youtube_dl_format, youtube_dl_ext, ranom = cb_data.split("|") print(cb_data) random1 = random_char(5) thumb_image_path = Config.DOWNLOAD_LOCATION + \ "/" + str(update.from_user.id) + f'{ranom}' + ".jpg" save_ytdl_json_path = Config.DOWNLOAD_LOCATION + \ "/" + str(update.from_user.id) + f'{ranom}' + ".json" try: with open(save_ytdl_json_path, "r", encoding="utf8") as f: response_json = json.load(f) except (FileNotFoundError) as e: await bot.delete_messages( chat_id=update.message.chat.id, message_ids=update.message.message_id, revoke=True ) return False
+    tg_send_type, youtube_dl_format, youtube_dl_ext, ranom = cb_data.split("|")
+    print(cb_data)
+    random1 = random_char(5)
+    thumb_image_path = Config.DOWNLOAD_LOCATION + \
+        "/" + str(update.from_user.id) + f'{ranom}' + ".jpg"
+    save_ytdl_json_path = Config.DOWNLOAD_LOCATION + \
+        "/" + str(update.from_user.id) + f'{ranom}' + ".json"
+    try:
+        with open(save_ytdl_json_path, "r", encoding="utf8") as f:
+            response_json = json.load(f)
+    except (FileNotFoundError) as e:
+        await bot.delete_messages(
+            chat_id=update.message.chat.id,
+            message_ids=update.message.message_id,
+            revoke=True
+        )
+        return False
     youtube_dl_url = update.message.reply_to_message.text
     custom_file_name = str(response_json.get("title")) + \
         "_" + youtube_dl_format + "." + youtube_dl_ext

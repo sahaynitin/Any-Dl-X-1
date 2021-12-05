@@ -169,13 +169,15 @@ async def echo(bot, update):
             disable_web_page_preview=True
         )
         return False
-    if t_response:
+        if t_response:
+        # logger.info(t_response)
         x_reponse = t_response
         if "\n" in x_reponse:
             x_reponse, _ = x_reponse.split("\n")
         response_json = json.loads(x_reponse)
+        randem = random_char(5)
         save_ytdl_json_path = Config.DOWNLOAD_LOCATION + \
-            "/" + str(update.from_user.id) + ".json"
+            "/" + str(update.from_user.id) + f'{randem}' + ".json"
         with open(save_ytdl_json_path, "w", encoding="utf8") as outfile:
             json.dump(response_json, outfile, ensure_ascii=False)
         # logger.info(response_json)
@@ -186,9 +188,7 @@ async def echo(bot, update):
         if "formats" in response_json:
             for formats in response_json["formats"]:
                 format_id = formats.get("format_id")
-                format_string = formats.get("format_note")
-                if format_string is None:
-                    format_string = formats.get("format")
+                format_string = formats.get("format")
                 format_ext = formats.get("ext")
                 approx_file_size = ""
                 if "filesize" in formats:

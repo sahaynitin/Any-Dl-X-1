@@ -14,7 +14,7 @@ import random
 import ffmpeg
 import asyncio
 import requests
-
+from helper_funcs.ran_text import random_char
 if bool(os.environ.get("WEBHOOK", False)):
     from sample_config import Config
 else:
@@ -25,7 +25,7 @@ from translation import Translation
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.errors import UserNotParticipant, UserBannedInChannel
-from database.database import *
+
 from helper_funcs.display_progress import humanbytes
 from helper_funcs.help_uploadbot import DownLoadFile
 

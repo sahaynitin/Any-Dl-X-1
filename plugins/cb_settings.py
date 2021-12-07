@@ -1,5 +1,5 @@
 import pyrogram
-from pyrogram import Client, filters
+from pyrogram import Client, filters, Message
 from plugins.settings import OpenSettings
 
 @Client.on_message(filters.private & filters.command("settings"))

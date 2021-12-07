@@ -40,13 +40,6 @@ async def fjoku(m: "types.Message"):
     try:
         await m.edit(
             text="**Here you can setup your settings:**",
-            reply_markup=types.InlineKeyboardMarkup(buttons_markup),
-            disable_web_page_preview=True,
-            parse_mode="Markdown"
+            reply_markup=types.InlineKeyboardMarkup(buttons_markup)
         )
-    except errors.MessageNotModified: pass
-    except errors.FloodWait as e:
-        await asyncio.sleep(e.x)
-        await show_settings(m)
-    except Exception as err:
-        Config.LOGGER.getLogger(__name__).error(err)
+    

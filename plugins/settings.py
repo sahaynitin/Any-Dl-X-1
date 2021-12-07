@@ -38,4 +38,4 @@ async def show_settings(m: "types.Message"):
             reply_markup=types.InlineKeyboardMarkup(buttons_markup),
             disable_web_page_preview=True,
             parse_mode="Markdown"
-        )
+

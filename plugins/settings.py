@@ -39,9 +39,3 @@ async def show_settings(m: "types.Message"):
             disable_web_page_preview=True,
             parse_mode="Markdown"
         )
-    except errors.MessageNotModified: pass
-    except errors.FloodWait as e:
-        await asyncio.sleep(e.x)
-        await show_settings(m)
-    except Exception as err:
-        Config.LOGGER.getLogger(__name__).error(err)

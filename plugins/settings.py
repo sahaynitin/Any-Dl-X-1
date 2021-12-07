@@ -1,11 +1,11 @@
 # (c) @AbirHasan2005
-
+from pyrogram import Client
 import asyncio
 from pyrogram import types, errors
 from sample_config import Config
 from database.database import db
 
-@ScreenShotBot.on_message(filters.private & filters.command("settings"))
+@Client.on_message(filters.private & filters.command("settings"))
 async def show_settings(m: "types.Message"):
     usr_id = m.chat.id
     user_data = await db.get_user_data(usr_id)

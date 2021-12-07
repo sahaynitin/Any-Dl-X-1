@@ -1,7 +1,7 @@
 # (c) @AbirHasan2005
 
 import asyncio
-from helpers.database.access_db import db
+from database.access import db
 from pyrogram.errors import MessageNotModified, FloodWait
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 

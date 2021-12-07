@@ -36,7 +36,8 @@ async def fjoku(m: "types.Message"):
                                                           callback_data="showCaption")])
     buttons_markup.append([types.InlineKeyboardButton("Close Message",
                                                       callback_data="closeMessage")])
-        await m.edit(
+        await bot.send_message(
+            chat_id=update.chat.id,
             text="**Here you can setup your settings:**"
             reply_markup=types.InlineKeyboardMarkup(buttons_markup)
     )

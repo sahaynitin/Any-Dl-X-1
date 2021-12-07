@@ -1,5 +1,5 @@
 # (c) @AbirHasan2005
-from pyrogram import Client
+from pyrogram import Client, filters
 import asyncio
 from pyrogram import types, errors
 from sample_config import Config

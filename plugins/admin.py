@@ -6,7 +6,7 @@ from pyrogram import filters
 from pyrogram.types import (
     Message
 )
-from configs import Config
+from sample_config import Config
 from pyrogram import Client
 from database.database import db
 from plugins.display_progress import humanbytes

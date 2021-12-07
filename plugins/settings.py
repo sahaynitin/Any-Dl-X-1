@@ -30,4 +30,10 @@ async def show_settings(m: "types.Message"):
         buttons_markup.append([types.InlineKeyboardButton("Show Caption",
                                                           callback_data="showCaption")])
     buttons_markup.append([types.InlineKeyboardButton("Close Message",
-
+            )
+    else:
+        await bot.send_message(
+            chat_id=update.chat.id,
+            text=here your Settings,
+            reply_to_message_id=update.message_id
+        )

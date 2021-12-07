@@ -1,4 +1,5 @@
-
+import pyrogram
+from pyrogram import Client, filters
 @Client.on_message(filters.private & filters.command("settings"))
 async def settings_handler(bot: Client, m: Message):
     editable = await m.reply_text("Please Wait ...", quote=True)

@@ -37,8 +37,8 @@ async def fjoku(m: "types.Message"):
     buttons_markup.append([types.InlineKeyboardButton("Close Message",
                                                       callback_data="closeMessage")])
 
-    try:
-        await m.edit
-            text="**Here you can setup your settings:**",
+    else:
+        await m.edit(
+            text="**Here you can setup your settings:**"
             reply_markup=types.InlineKeyboardMarkup(buttons_markup)
-    
+    )

@@ -3,15 +3,10 @@ from pyrogram import Client, filters
 import asyncio
 from pyrogram import types, errors
 from sample_config import Config
-from database.database import db
+
 
 @Client.on_message(filters.private & filters.command("settings"))
 async def show_settings(m: "types.Message"):
-    usr_id = m.chat.id
-    user_data = await db.get_user_data(usr_id)
-    if not user_data:
-        await m.edit("Failed to fetch your data from database!")
-        return
     upload_as_doc = user_data.get("upload_as_doc", False)
     caption = user_data.get("caption", None)
     apply_caption = user_data.get("apply_caption", True)

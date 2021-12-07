@@ -6,7 +6,7 @@ from sample_config import Config
 from database.database import db
 
 @Client.on_message(filters.private & filters.command("settings"))
-async def settings(m: "types.Message"):
+async def fjoku(m: "types.Message"):
     usr_id = m.chat.id
     user_data = await db.get_user_data(usr_id)
     if not user_data:

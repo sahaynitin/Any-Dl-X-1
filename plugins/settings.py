@@ -30,11 +30,4 @@ async def show_settings(m: "types.Message"):
         buttons_markup.append([types.InlineKeyboardButton("Show Caption",
                                                           callback_data="showCaption")])
     buttons_markup.append([types.InlineKeyboardButton("Close Message",
-                                                      callback_data="closeMessage")])
 
-    try:
-        await m.edit(
-            text="**Here you can setup your settings:**",
-            reply_markup=types.InlineKeyboardMarkup(buttons_markup),
-            disable_web_page_preview=True,
-            parse_mode="Markdown"

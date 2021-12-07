@@ -1,4 +1,5 @@
-@ScreenShotBot.on_message(filters.private & filters.command("settings"))
-async def start(c, m):
 
-    await Utilities.display_settings(c, m, db)
+@Client.on_message(filters.private & filters.command("settings"))
+async def settings_handler(bot: Client, m: Message):
+    editable = await m.reply_text("Please Wait ...", quote=True)
+    await OpenSettings(editable, m.from_user.id)
